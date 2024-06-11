@@ -1,0 +1,10 @@
+
+<ul>
+  <li>Title: <%= @task.title %></li>
+  <li>Details: <%= @task.details %></li>
+  <li>Completed: <%= @task.completed %></li>
+  <%= link_to "Back to Home", tasks_path%>
+</ul>
+
+<%= link_to "Delete Task", task_path(@task),
+data: { turbo_method: :delete, turbo_confirm: "Are you sure" } %>
